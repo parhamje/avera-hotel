@@ -113,6 +113,15 @@ To achieve true, zero-lag 60 FPS scrubbing in browser hardware decoders, two cri
 
 ---
 
+## ✦ Live Production Deployments
+
+The AVÉRA Luxury Resort digital experience is deployed and accessible at:
+
+* **Official Live Site (GitHub Pages)**: **[https://parhamje.github.io/avera-hotel/](https://parhamje.github.io/avera-hotel/)**
+* **Source Repository**: **[https://github.com/parhamje/avera-hotel](https://github.com/parhamje/avera-hotel)**
+
+---
+
 ## ✦ 100% Local Architecture & Netlify Drop Ready
 
 This project is **100% self-contained and offline-ready**. It makes **zero external CDN or font requests**:
