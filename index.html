@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVÉRA · Luxury Boutique Resort</title>
+  <meta name="description" content="AVÉRA is a quiet sanctuary of minimalist architecture, slow coastal mornings, and private oceanfront villas shaped by nature and light.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AVÉRA · Luxury Boutique Resort">
+  <meta property="og:description" content="Stay somewhere unforgettable. A quiet sanctuary shaped by nature, light, and thoughtful design.">
+  <meta property="og:type" content="website">
+
+  <!-- Local Self-Hosted Fonts -->
+  <link rel="stylesheet" href="css/fonts.css?v=4">
+
+  <!-- Local Standalone Tailwind CSS -->
+  <link rel="stylesheet" href="css/tailwind.css?v=4">
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=4">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23C5A880'>A</text></svg>">
+</head>
+
+<body class="bg-charcoal text-ivory antialiased selection:bg-accent selection:text-charcoal overflow-x-hidden">
+
+  <!-- =====================================================
+       0. LUXURY LOADING SCREEN
+       ===================================================== -->
+  <div class="loader-overlay" data-loader aria-hidden="false">
+    <div class="text-center px-6">
+      <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl tracking-[0.25em] text-ivory uppercase font-light mb-4">
+        AVÉRA
+      </h2>
+      <div class="w-12 h-[1px] bg-accent/40 mx-auto mb-4"></div>
+      <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-ivory/60 mb-8">
+        A Place to Remember
+      </p>
+      
+      <!-- Progress Indicator -->
+      <div class="flex flex-col items-center">
+        <span class="font-sans text-[0.625rem] tracking-[0.2em] text-accent/80 mb-2 font-medium" data-loader-progress>
+          LOADING 0%
+        </span>
+        <div class="w-40 sm:w-48 h-[1px] bg-white/10 relative overflow-hidden">
+          <div class="absolute left-0 top-0 bottom-0 bg-accent transition-all duration-200" style="width: 0%;" data-loader-bar></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       1. FIXED NAVIGATION
+       ===================================================== -->
+  <header class="nav-header nav-dark py-5 px-6 sm:px-10 lg:px-16" data-navbar>
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="font-serif text-2xl tracking-[0.25em] uppercase font-light text-current transition-opacity hover:opacity-75" data-cursor="AVÉRA">
+        AVÉRA
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center space-x-10 text-[0.75rem] uppercase tracking-[0.2em] font-medium" aria-label="Primary Navigation">
+        <a href="#rooms" class="nav-link hover:text-accent transition-colors" data-cursor="EXPLORE">Rooms</a>
+        <a href="#experience" class="nav-link hover:text-accent transition-colors" data-cursor="DISCOVER">Experience</a>
+        <a href="#gallery" class="nav-link hover:text-accent transition-colors" data-cursor="VIEW">Gallery</a>
+        <a href="#location" class="nav-link hover:text-accent transition-colors" data-cursor="VISIT">Location</a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden md:block">
+        <a href="#booking" class="inline-flex items-center text-[0.6875rem] uppercase tracking-[0.2em] font-medium px-5 py-2.5 border border-current/25 hover:border-accent hover:text-accent transition-all duration-300" data-cursor="BOOK">
+          Book Your Stay
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none" aria-label="Toggle menu" data-menu-toggle>
+        <span class="w-6 h-[1px] bg-current transition-transform duration-300"></span>
+        <span class="w-6 h-[1px] bg-current transition-transform duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-nav-overlay flex flex-col justify-between p-8 sm:p-12 text-ivory" data-mobile-menu aria-hidden="true">
+    <div class="flex items-center justify-between">
+      <span class="font-serif text-2xl tracking-[0.25em] font-light">AVÉRA</span>
+      <button type="button" class="text-xs uppercase tracking-[0.2em] text-ivory/60 hover:text-white" data-menu-close>
+        Close [✕]
+      </button>
+    </div>
+
+    <nav class="my-auto py-12 flex flex-col space-y-6">
+      <a href="#rooms" class="font-serif text-4xl sm:text-5xl font-light hover:text-accent transition-colors" data-menu-link>
+        <span class="font-sans text-xs tracking-widest text-accent mr-3">01</span> Rooms & Suites
+      </a>
+      <a href="#experience" class="font-serif text-4xl sm:text-5xl font-light hover:text-accent transition-colors" data-menu-link>
+        <span class="font-sans text-xs tracking-widest text-accent mr-3">02</span> Experience
+      </a>
+      <a href="#gallery" class="font-serif text-4xl sm:text-5xl font-light hover:text-accent transition-colors" data-menu-link>
+        <span class="font-sans text-xs tracking-widest text-accent mr-3">03</span> Gallery
+      </a>
+      <a href="#location" class="font-serif text-4xl sm:text-5xl font-light hover:text-accent transition-colors" data-menu-link>
+        <span class="font-sans text-xs tracking-widest text-accent mr-3">04</span> Location
+      </a>
+      <a href="#booking" class="font-serif text-4xl sm:text-5xl font-light hover:text-accent transition-colors" data-menu-link>
+        <span class="font-sans text-xs tracking-widest text-accent mr-3">05</span> Reservations
+      </a>
+    </nav>
+
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between text-xs text-ivory/60 space-y-4 sm:space-y-0">
+      <div>
+        <p class="uppercase tracking-widest text-[0.625rem] text-accent mb-1">Direct Inquiries</p>
+        <p>concierge@averaresort.com</p>
+      </div>
+      <div>
+        <p class="uppercase tracking-widest text-[0.625rem] text-accent mb-1">Location</p>
+        <p>Tropical Coast · Island District</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- =====================================================
+         SECTION 01 — HERO (assets/videos/1.mp4)
+         Scroll-Scrubbed Sequence: Bedroom -> Window -> Terrace
+         ===================================================== -->
+    <section id="hero" class="video-section relative" data-video-section="hero" style="height: 280vh;">
+      <div class="video-sticky">
+        <!-- Scrubbed Video -->
+        <video class="video-scrub" src="assets/videos/1.mp4" muted playsinline preload="auto" data-index="1"></video>
+        
+        <!-- Subtle Cinematic Overlays -->
+        <div class="video-vignette"></div>
+
+        <!-- Typography Phase 1: Intro (Active at progress 0.0 -> 0.35) -->
+        <div class="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 lg:px-24 max-w-5xl mx-auto z-10 pointer-events-none"
+             data-progress-start="0.0" data-progress-end="0.35" data-fade-in="0.01" data-fade-out="0.12">
+          
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-4 sm:mb-6 font-medium">
+            AVÉRA Luxury Resort
+          </p>
+
+          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] tracking-tight mb-6 sm:mb-8 text-ivory">
+            Stay somewhere<br>
+            <em class="italic font-light text-white/95">unforgettable.</em>
+          </h1>
+
+          <p class="font-sans text-sm sm:text-base md:text-lg text-ivory/80 max-w-lg leading-relaxed font-light mb-8 sm:mb-10">
+            A quiet retreat shaped by nature, light and thoughtful design.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 pointer-events-auto">
+            <a href="#rooms" class="px-7 py-3.5 bg-ivory text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent transition-all duration-300" data-cursor="EXPLORE">
+              Explore Rooms
+            </a>
+            <a href="#intro" class="px-7 py-3.5 border border-ivory/30 text-ivory font-sans text-xs uppercase tracking-[0.2em] font-medium hover:border-accent hover:text-accent transition-all duration-300" data-cursor="DISCOVER">
+              Discover AVÉRA
+            </a>
+          </div>
+        </div>
+
+        <!-- Typography Phase 2: Terrace Reveal (Active at progress 0.40 -> 0.85) -->
+        <div class="absolute inset-0 flex flex-col justify-end pb-24 sm:pb-32 px-6 sm:px-12 lg:px-24 max-w-5xl mx-auto z-10 pointer-events-none"
+             data-progress-start="0.40" data-progress-end="0.85" data-fade-in="0.10" data-fade-out="0.10">
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-3 font-medium">
+            Sanctuary Reveal
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-ivory mb-3 leading-tight">
+            Where architecture steps onto <em class="italic">the horizon</em>
+          </h2>
+          <p class="font-sans text-xs sm:text-sm text-ivory/70 max-w-md font-light">
+            Each villa unfolds seamlessly onto private terraces overlooking tiered turquoise waters and tropical peaks.
+          </p>
+        </div>
+
+        <!-- Section Bottom HUD -->
+        <div class="absolute bottom-8 left-6 sm:left-12 right-6 sm:right-12 flex items-center justify-between z-20 pointer-events-none text-ivory/60 text-[0.625rem] tracking-[0.2em] uppercase font-sans">
+          <div class="flex items-center space-x-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            <span>Scroll to progress scene</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <span class="text-ivory font-medium">01 / 06</span>
+            <div class="w-16 h-[1px] bg-white/20 relative overflow-hidden">
+              <div class="absolute left-0 top-0 bottom-0 bg-accent w-full origin-left transition-transform duration-75" data-hud-bar style="transform: scaleX(0);"></div>
+            </div>
+            <span data-hud-progress class="font-mono text-ivory">0%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 02 — INTRO (Warm Ivory / Editorial Text)
+         ===================================================== -->
+    <section id="intro" class="section-ivory py-32 px-6 sm:px-12 lg:px-20 relative" data-theme="light">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Editorial Text Content -->
+          <div class="lg:col-span-7" data-reveal>
+            <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-mutedtext mb-6 font-medium">
+              The AVÉRA Experience
+            </p>
+            
+            <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darktext font-light leading-[1.05] tracking-tight mb-8">
+              Designed for<br>
+              <em class="italic font-light">slower mornings</em><br>
+              and longer stays.
+            </h2>
+
+            <p class="font-sans text-base sm:text-lg text-mutedtext font-light leading-relaxed mb-10 max-w-xl">
+              AVÉRA is a contemporary boutique retreat nestled along a sheltered tropical bay, created for guests who appreciate quiet luxury, thoughtful architectural details, and spaces designed to make every hour feel effortless and unhurried.
+            </p>
+
+            <!-- Statistics / Details Row -->
+            <div class="grid grid-cols-3 gap-6 pt-8 border-t border-hairline-dark max-w-lg mb-8">
+              <div>
+                <span class="block font-serif text-3xl sm:text-4xl text-darktext font-light mb-1">24</span>
+                <span class="font-sans text-[0.6875rem] uppercase tracking-[0.2em] text-mutedtext">Rooms</span>
+              </div>
+              <div>
+                <span class="block font-serif text-3xl sm:text-4xl text-darktext font-light mb-1">08</span>
+                <span class="font-sans text-[0.6875rem] uppercase tracking-[0.2em] text-mutedtext">Suites</span>
+              </div>
+              <div>
+                <span class="block font-serif text-3xl sm:text-4xl text-darktext font-light mb-1">12</span>
+                <span class="font-sans text-[0.6875rem] uppercase tracking-[0.2em] text-mutedtext">Private Villas</span>
+              </div>
+            </div>
+
+            <a href="#rooms" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-darktext hover:text-accent transition-colors group" data-cursor="EXPLORE">
+              <span>Explore accommodation</span>
+              <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Editorial Imagery -->
+          <div class="lg:col-span-5" data-reveal data-reveal-delay="150">
+            <div class="img-zoom-container relative aspect-[4/5] bg-darktext/5 overflow-hidden shadow-sm">
+              <img src="assets/images/intro.jpg" alt="Minimal luxury bedroom with soft natural sunlight" class="w-full h-full object-cover">
+            </div>
+            <p class="font-sans text-[0.6875rem] tracking-[0.15em] text-mutedtext mt-3 text-right">
+              Morning light across the timber terrace
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 03 — ROOMS & SUITES (Scroll Scrubbed)
+         ===================================================== -->
+    <div id="rooms" class="bg-charcoal text-ivory pt-24">
+      <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 mb-12">
+        <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-3 font-medium">
+          Accommodation
+        </p>
+        <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ivory">
+          Rooms &amp; Suites
+        </h2>
+        <p class="font-sans text-sm text-ivory/60 mt-3 font-light max-w-md">
+          Three curated room concepts, each oriented toward the calm tropical horizon.
+        </p>
+      </div>
+
+      <!-- ROOM 01: DELUXE KING ROOM (assets/videos/2.mp4) -->
+      <section id="room-deluxe" class="video-section relative" data-video-section="room-deluxe" style="height: 260vh;">
+        <div class="video-sticky">
+          <video class="video-scrub" src="assets/videos/2.mp4" muted playsinline preload="auto" data-index="2"></video>
+          <div class="video-vignette-subtle"></div>
+
+          <!-- Room Overlay Content -->
+          <div class="absolute inset-0 flex flex-col justify-between p-6 sm:p-12 lg:p-20 z-10 pointer-events-none"
+               data-progress-start="0.10" data-progress-end="0.85" data-fade-in="0.10" data-fade-out="0.10">
+            
+            <div class="flex justify-between items-start">
+              <span class="font-serif text-2xl sm:text-3xl font-light text-accent">01</span>
+              <div class="text-right">
+                <span class="font-sans text-[0.625rem] tracking-[0.2em] uppercase text-ivory/60 block">Starting From</span>
+                <span class="font-serif text-xl sm:text-2xl text-ivory font-light">$480 <span class="text-xs font-sans text-ivory/60">/ night</span></span>
+              </div>
+            </div>
+
+            <div class="max-w-2xl">
+              <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-2 font-medium">Deluxe Accommodation</p>
+              <h3 class="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ivory mb-4">
+                Deluxe King Room
+              </h3>
+              <p class="font-sans text-sm sm:text-base text-ivory/80 font-light leading-relaxed mb-6">
+                A quiet room designed for slower mornings. Featuring hand-loomed linens, a stone soaking bath, and a private timber terrace framing tranquil sea cliffs.
+              </p>
+
+              <!-- Metadata Pills -->
+              <div class="flex flex-wrap gap-2 sm:gap-3 text-[0.6875rem] uppercase tracking-[0.15em] text-ivory/90 mb-8 font-sans">
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">King Bed</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">2 Guests</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">48 M²</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">Stone Soaking Tub</span>
+              </div>
+
+              <div class="pointer-events-auto">
+                <button type="button" onclick="selectRoomForBooking('Deluxe King Room')" class="px-6 py-3 bg-ivory text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent transition-colors" data-cursor="RESERVE">
+                  Reserve This Room
+                </button>
+              </div>
+            </div>
+
+            <!-- Sequence Progress -->
+            <div class="flex justify-between items-center text-[0.625rem] tracking-[0.2em] uppercase font-sans text-ivory/50">
+              <span>Scene 02 / Deluxe King</span>
+              <span data-hud-progress class="font-mono text-ivory">0%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROOM 02: GARDEN SUITE (assets/videos/3.mp4) -->
+      <section id="room-garden" class="video-section relative" data-video-section="room-garden" style="height: 260vh;">
+        <div class="video-sticky">
+          <video class="video-scrub" src="assets/videos/3.mp4" muted playsinline preload="auto" data-index="3"></video>
+          <div class="video-vignette-subtle"></div>
+
+          <!-- Room Overlay Content -->
+          <div class="absolute inset-0 flex flex-col justify-between p-6 sm:p-12 lg:p-20 z-10 pointer-events-none"
+               data-progress-start="0.10" data-progress-end="0.85" data-fade-in="0.10" data-fade-out="0.10">
+            
+            <div class="flex justify-between items-start">
+              <span class="font-serif text-2xl sm:text-3xl font-light text-accent">02</span>
+              <div class="text-right">
+                <span class="font-sans text-[0.625rem] tracking-[0.2em] uppercase text-ivory/60 block">Starting From</span>
+                <span class="font-serif text-xl sm:text-2xl text-ivory font-light">$720 <span class="text-xs font-sans text-ivory/60">/ night</span></span>
+              </div>
+            </div>
+
+            <div class="max-w-2xl">
+              <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-2 font-medium">Private Sanctuary</p>
+              <h3 class="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ivory mb-4">
+                Garden Suite
+              </h3>
+              <p class="font-sans text-sm sm:text-base text-ivory/80 font-light leading-relaxed mb-6">
+                A private retreat surrounded by tropical greenery. Opens onto an intimate plunge pool terrace and open-air limestone tub with expansive mountain vistas.
+              </p>
+
+              <!-- Metadata Pills -->
+              <div class="flex flex-wrap gap-2 sm:gap-3 text-[0.6875rem] uppercase tracking-[0.15em] text-ivory/90 mb-8 font-sans">
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">King Bed</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">2 Guests</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">64 M²</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">Private Plunge Pool</span>
+              </div>
+
+              <div class="pointer-events-auto">
+                <button type="button" onclick="selectRoomForBooking('Garden Suite')" class="px-6 py-3 bg-ivory text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent transition-colors" data-cursor="RESERVE">
+                  Reserve This Suite
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center text-[0.625rem] tracking-[0.2em] uppercase font-sans text-ivory/50">
+              <span>Scene 03 / Garden Suite</span>
+              <span data-hud-progress class="font-mono text-ivory">0%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROOM 03: SIGNATURE SUITE (assets/videos/4.mp4) -->
+      <section id="room-signature" class="video-section relative" data-video-section="room-signature" style="height: 260vh;">
+        <div class="video-sticky">
+          <video class="video-scrub" src="assets/videos/4.mp4" muted playsinline preload="auto" data-index="4"></video>
+          <div class="video-vignette-subtle"></div>
+
+          <!-- Room Overlay Content -->
+          <div class="absolute inset-0 flex flex-col justify-between p-6 sm:p-12 lg:p-20 z-10 pointer-events-none"
+               data-progress-start="0.10" data-progress-end="0.85" data-fade-in="0.10" data-fade-out="0.10">
+            
+            <div class="flex justify-between items-start">
+              <span class="font-serif text-2xl sm:text-3xl font-light text-accent">03</span>
+              <div class="text-right">
+                <span class="font-sans text-[0.625rem] tracking-[0.2em] uppercase text-ivory/60 block">Starting From</span>
+                <span class="font-serif text-xl sm:text-2xl text-ivory font-light">$1,150 <span class="text-xs font-sans text-ivory/60">/ night</span></span>
+              </div>
+            </div>
+
+            <div class="max-w-2xl">
+              <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-accent mb-2 font-medium">Premier Horizon Estate</p>
+              <h3 class="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ivory mb-4">
+                Signature Suite
+              </h3>
+              <p class="font-sans text-sm sm:text-base text-ivory/80 font-light leading-relaxed mb-6">
+                An elevated stay with the horizon at your doorstep. Infinity-edge private pool suspended above the ocean, capturing golden hour sunsets over limestone peaks.
+              </p>
+
+              <!-- Metadata Pills -->
+              <div class="flex flex-wrap gap-2 sm:gap-3 text-[0.6875rem] uppercase tracking-[0.15em] text-ivory/90 mb-8 font-sans">
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">King Bed</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">2 Guests</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">82 M²</span>
+                <span class="px-3 py-1.5 border border-white/20 backdrop-blur-sm">Private Infinity Pool</span>
+              </div>
+
+              <div class="pointer-events-auto">
+                <button type="button" onclick="selectRoomForBooking('Signature Suite')" class="px-6 py-3 bg-ivory text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent transition-colors" data-cursor="RESERVE">
+                  Reserve This Suite
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center text-[0.625rem] tracking-[0.2em] uppercase font-sans text-ivory/50">
+              <span>Scene 04 / Signature Suite</span>
+              <span data-hud-progress class="font-mono text-ivory">0%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- =====================================================
+         SECTION 04 — AMENITIES (Clean Editorial Grid)
+         ===================================================== -->
+    <section id="amenities" class="section-ivory py-32 px-6 sm:px-12 lg:px-20 relative" data-theme="light">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="max-w-2xl mb-16 sm:mb-20" data-reveal>
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-mutedtext mb-4 font-medium">
+            Resort Amenities
+          </p>
+          <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darktext font-light leading-[1.05]">
+            Everything you need.<br>
+            <em class="italic font-light">Nothing you don't.</em>
+          </h2>
+        </div>
+
+        <!-- Minimal 4x2 Editorial Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-hairline-dark border border-hairline-dark" data-reveal data-reveal-delay="100">
+          
+          <!-- 01. Private Pool -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">01</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M2 18c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5M2 14c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5M7 11V5a2 2 0 0 1 4 0v6M7 7h4"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Private Pool</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Infinity-edge pools sculpted into private hillside decks.</p>
+          </div>
+
+          <!-- 02. Spa -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">02</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M12 3c-4.5 5-7 8.5-7 12a7 7 0 0 0 14 0c0-3.5-2.5-7-7-12zM12 11c-1 2-2 3.5-2 5a2 2 0 0 0 4 0c0-1.5-1-3-2-5z"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Spa</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Botanical oil infusions and sound bath healing therapies.</p>
+          </div>
+
+          <!-- 03. Breakfast -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">03</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 2v3M10 2v3M14 2v3"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Breakfast</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Artisanal morning harvest served leisurely until noon.</p>
+          </div>
+
+          <!-- 04. Room Service -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">04</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 10V6M10 6h4"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Room Service</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Discreet 24-hour dining brought to your terrace table.</p>
+          </div>
+
+          <!-- 05. High-Speed WiFi -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">05</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">WiFi</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Ultra-quiet fiber connectivity seamlessly across the grounds.</p>
+          </div>
+
+          <!-- 06. Air Conditioning -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">06</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Air Conditioning</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Silent geothermal climate control with fresh air exchange.</p>
+          </div>
+
+          <!-- 07. Fitness Studio -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">07</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M6 5v14M18 5v14M2 9h4M18 9h4M2 15h4M18 15h4M6 12h12"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Fitness</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Open-air pavilion for yoga, Pilates, and strength movement.</p>
+          </div>
+
+          <!-- 08. Concierge -->
+          <div class="bg-ivory p-8 sm:p-10 flex flex-col justify-between min-h-[220px] transition-colors hover:bg-white/60">
+            <div>
+              <span class="font-sans text-[0.625rem] tracking-[0.2em] text-mutedtext uppercase block mb-6">08</span>
+              <svg class="w-6 h-6 stroke-darktext fill-none mb-4" stroke-width="1.25" viewBox="0 0 24 24">
+                <path d="M12 2a4 4 0 0 1 4 4c0 3-4 6-4 6s-4-3-4-6a4 4 0 0 1 4-4zM6 18c0-3 2.5-5 6-5s6 2 6 5v2H6v-2z"/>
+              </svg>
+              <h3 class="font-serif text-xl text-darktext font-normal mb-2">Concierge</h3>
+            </div>
+            <p class="font-sans text-xs text-mutedtext leading-relaxed">Private yacht charters, island guides, and personal hosts.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 05 — RESORT (assets/videos/5.mp4)
+         Aerial Cinematic Sweep over Pools, Villas, Ocean & Sunset
+         ===================================================== -->
+    <section id="resort" class="video-section relative" data-video-section="resort" style="height: 280vh;">
+      <div class="video-sticky">
+        <video class="video-scrub" src="assets/videos/5.mp4" muted playsinline preload="auto" data-index="5"></video>
+        <div class="video-vignette"></div>
+
+        <!-- Cinematic Overlay Typography -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 sm:px-12 z-10 pointer-events-none"
+             data-progress-start="0.15" data-progress-end="0.80" data-fade-in="0.15" data-fade-out="0.15">
+          
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.35em] text-accent mb-4 font-medium">
+            The Sanctuary Grounds
+          </p>
+          
+          <h2 class="font-serif text-5xl sm:text-7xl md:text-8xl font-light text-ivory mb-6 tracking-tight leading-[0.95]">
+            More than<br>
+            <em class="italic font-light">a room.</em>
+          </h2>
+
+          <p class="font-sans text-sm sm:text-base md:text-lg text-ivory/80 max-w-xl font-light leading-relaxed">
+            A place where nature, architecture and stillness meet.
+          </p>
+        </div>
+
+        <!-- Section Bottom HUD -->
+        <div class="absolute bottom-8 left-6 sm:left-12 right-6 sm:right-12 flex items-center justify-between z-20 pointer-events-none text-ivory/60 text-[0.625rem] tracking-[0.2em] uppercase font-sans">
+          <span>Scene 05 / Aerial Resort Panorama</span>
+          <div class="flex items-center space-x-3">
+            <span class="text-ivory font-medium">05 / 06</span>
+            <span data-hud-progress class="font-mono text-ivory">0%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 06 — EXPERIENCE (Three Editorial Columns)
+         ===================================================== -->
+    <section id="experience" class="section-ivory py-32 px-6 sm:px-12 lg:px-20 relative" data-theme="light">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="max-w-2xl mb-16 sm:mb-20" data-reveal>
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-mutedtext mb-4 font-medium">
+            The Living Rhythm
+          </p>
+          <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darktext font-light leading-[1.05]">
+            Moments crafted for<br>
+            <em class="italic font-light">pure presence.</em>
+          </h2>
+        </div>
+
+        <!-- 3 Editorial Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 border-t border-hairline-dark pt-12" data-reveal data-reveal-delay="100">
+          
+          <!-- Column 01 -->
+          <div>
+            <span class="font-serif text-2xl font-light text-accent block mb-4">07:00</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-darktext font-normal mb-3">
+              Slow Mornings
+            </h3>
+            <p class="font-sans text-sm text-mutedtext font-light leading-relaxed">
+              Wake with the first light and take your time. Breakfast served overlooking the bay, fresh single-origin coffee on the terrace, and no reason to hurry.
+            </p>
+          </div>
+
+          <!-- Column 02 -->
+          <div>
+            <span class="font-serif text-2xl font-light text-accent block mb-4">13:00</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-darktext font-normal mb-3">
+              Local Flavours
+            </h3>
+            <p class="font-sans text-sm text-mutedtext font-light leading-relaxed">
+              Seasonal ingredients, quiet dinners and island evenings. Menus built in harmony with organic growers and line-caught seafood from nearby crystal coves.
+            </p>
+          </div>
+
+          <!-- Column 03 -->
+          <div>
+            <span class="font-serif text-2xl font-light text-accent block mb-4">21:00</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-darktext font-normal mb-3">
+              Quiet Escapes
+            </h3>
+            <p class="font-sans text-sm text-mutedtext font-light leading-relaxed">
+              Private spaces designed for complete disconnection. Candlelit evening water reflections, a discreet cellar bar, and a pool that stays warmly lit beneath the stars.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 07 — GALLERY (Asymmetric Masonry & Lightbox)
+         ===================================================== -->
+    <section id="gallery" class="section-ivory py-32 px-6 sm:px-12 lg:px-20 border-t border-hairline-dark relative" data-theme="light">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-20" data-reveal>
+          <div>
+            <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-mutedtext mb-4 font-medium">
+              Visual Archive
+            </p>
+            <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darktext font-light">
+              A glimpse of <em class="italic">AVÉRA</em>
+            </h2>
+          </div>
+          <p class="font-sans text-xs text-mutedtext uppercase tracking-widest mt-4 md:mt-0 font-medium">
+            Select any image to view in full
+          </p>
+        </div>
+
+        <!-- Asymmetric Masonry Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+          
+          <!-- Image 01 (Col span 7, tall landscape) -->
+          <div class="lg:col-span-7" data-parallax-speed="0.04" data-reveal>
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-01.jpg" data-lightbox-title="Pool Pavilion" data-lightbox-caption="Sunlight shifting across limestone sunloungers" data-cursor="VIEW">
+              <div class="aspect-[16/11] overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-01.jpg" alt="AVÉRA pool terrace loungers" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">Pool Pavilion · Daylight</p>
+            </button>
+          </div>
+
+          <!-- Image 02 (Col span 5, portrait) -->
+          <div class="lg:col-span-5" data-parallax-speed="-0.03" data-reveal data-reveal-delay="100">
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-02.jpg" data-lightbox-title="Hillside Terrace" data-lightbox-caption="Shaded loungers amidst coastal palms" data-cursor="VIEW">
+              <div class="aspect-[4/5] overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-02.jpg" alt="Hillside terrace view" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">Private Deck · Canopy View</p>
+            </button>
+          </div>
+
+          <!-- Image 03 (Col span 4, portrait) -->
+          <div class="lg:col-span-4" data-parallax-speed="0.05" data-reveal>
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-03.jpg" data-lightbox-title="Bedroom Sanctuary" data-lightbox-caption="Neutral woven textiles and soft morning shadows" data-cursor="VIEW">
+              <div class="aspect-[3/4] overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-03.jpg" alt="Minimal bedroom suite" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">The Suite · Master Bed</p>
+            </button>
+          </div>
+
+          <!-- Image 04 (Col span 8, cinematic wide) -->
+          <div class="lg:col-span-8" data-parallax-speed="-0.02" data-reveal data-reveal-delay="150">
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-04.jpg" data-lightbox-title="Stone Soaking Tub" data-lightbox-caption="Open-air bathroom with garden framing" data-cursor="VIEW">
+              <div class="aspect-[16/9] overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-04.jpg" alt="Stone soaking tub" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">Garden Bath · Natural Stone</p>
+            </button>
+          </div>
+
+          <!-- Image 05 (Col span 6, square) -->
+          <div class="lg:col-span-6" data-parallax-speed="0.03" data-reveal>
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-05.jpg" data-lightbox-title="Restaurant Atrium" data-lightbox-caption="Warm ambient lights and timber craft" data-cursor="VIEW">
+              <div class="aspect-square overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-05.jpg" alt="Restaurant dining area" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">The Dining Room · Evening</p>
+            </button>
+          </div>
+
+          <!-- Image 06 (Col span 6, square) -->
+          <div class="lg:col-span-6" data-parallax-speed="-0.04" data-reveal data-reveal-delay="100">
+            <button type="button" class="w-full text-left group block overflow-hidden" 
+                    data-lightbox-src="assets/images/gallery-06.jpg" data-lightbox-title="Morning Table" data-lightbox-caption="Tropical fruits and estate coffee" data-cursor="VIEW">
+              <div class="aspect-square overflow-hidden bg-darktext/5">
+                <img src="assets/images/gallery-06.jpg" alt="Breakfast table" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+              </div>
+              <p class="font-sans text-[0.6875rem] uppercase tracking-widest text-mutedtext mt-3">Estate Breakfast · Slow Table</p>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 08 — EVENING / NIGHT (assets/videos/6.mp4)
+         Dusk to Twilight Illumination
+         ===================================================== -->
+    <section id="evening" class="video-section relative" data-video-section="evening" style="height: 280vh;">
+      <div class="video-sticky">
+        <video class="video-scrub" src="assets/videos/6.mp4" muted playsinline preload="auto" data-index="6"></video>
+        <div class="video-vignette"></div>
+
+        <!-- Overlay Typography -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 sm:px-12 z-10 pointer-events-none"
+             data-progress-start="0.10" data-progress-end="0.85" data-fade-in="0.12" data-fade-out="0.12">
+          
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.35em] text-accent mb-4 font-medium">
+            Evening Atmosphere
+          </p>
+
+          <h2 class="font-serif text-5xl sm:text-7xl md:text-8xl font-light text-ivory mb-6 tracking-tight leading-[0.95]">
+            Your room is<br>
+            <em class="italic font-light">waiting.</em>
+          </h2>
+
+          <p class="font-sans text-sm sm:text-base md:text-lg text-ivory/80 max-w-lg font-light leading-relaxed mb-8">
+            Leave the ordinary behind.
+          </p>
+
+          <div class="pointer-events-auto">
+            <a href="#booking" class="px-8 py-4 bg-ivory text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent transition-all duration-300 inline-block" data-cursor="BOOK">
+              Book Your Stay
+            </a>
+          </div>
+        </div>
+
+        <!-- Section Bottom HUD -->
+        <div class="absolute bottom-8 left-6 sm:left-12 right-6 sm:right-12 flex items-center justify-between z-20 pointer-events-none text-ivory/60 text-[0.625rem] tracking-[0.2em] uppercase font-sans">
+          <span>Scene 06 / Dusk to Twilight</span>
+          <div class="flex items-center space-x-3">
+            <span class="text-ivory font-medium">06 / 06</span>
+            <span data-hud-progress class="font-mono text-ivory">0%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 09 — BOOKING SECTION (#12110F Deep Charcoal)
+         ===================================================== -->
+    <section id="booking" class="bg-charcoal text-ivory py-32 px-6 sm:px-12 lg:px-20 border-t border-hairline-light relative" data-theme="dark">
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="text-center mb-16 sm:mb-20" data-reveal>
+          <p class="font-sans text-[0.6875rem] uppercase tracking-[0.35em] text-accent mb-4 font-medium">
+            Reservations
+          </p>
+          <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-ivory leading-tight">
+            Your room is<br>
+            <em class="italic font-light">waiting.</em>
+          </h2>
+          <p class="font-sans text-sm sm:text-base text-ivory/60 mt-4 font-light max-w-md mx-auto">
+            Reserve your quiet dates along the bay. Our concierge arranges seamless private transfers upon arrival.
+          </p>
+        </div>
+
+        <!-- Editorial Booking Form -->
+        <form class="space-y-8 bg-dark-card p-8 sm:p-12 border border-hairline-light" data-booking-form data-reveal data-reveal-delay="100">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <!-- Check In -->
+            <div class="flex flex-col">
+              <label for="checkin" class="font-sans text-[0.625rem] uppercase tracking-[0.25em] text-accent mb-2">Check In</label>
+              <input type="date" id="checkin" name="checkin" required class="luxury-input font-sans text-sm">
+            </div>
+
+            <!-- Check Out -->
+            <div class="flex flex-col">
+              <label for="checkout" class="font-sans text-[0.625rem] uppercase tracking-[0.25em] text-accent mb-2">Check Out</label>
+              <input type="date" id="checkout" name="checkout" required class="luxury-input font-sans text-sm">
+            </div>
+
+            <!-- Guests -->
+            <div class="flex flex-col">
+              <label for="guests" class="font-sans text-[0.625rem] uppercase tracking-[0.25em] text-accent mb-2">Guests</label>
+              <select id="guests" name="guests" class="luxury-input font-sans text-sm">
+                <option value="1 Guest">1 Guest</option>
+                <option value="2 Guests" selected>2 Guests</option>
+                <option value="3 Guests">3 Guests</option>
+                <option value="4+ Guests / Private Estate">4+ Guests / Private Estate</option>
+              </select>
+            </div>
+
+            <!-- Room Choice -->
+            <div class="flex flex-col">
+              <label for="room" class="font-sans text-[0.625rem] uppercase tracking-[0.25em] text-accent mb-2">Accommodation</label>
+              <select id="room" name="room" class="luxury-input font-sans text-sm">
+                <option value="Deluxe King Room">Deluxe King Room</option>
+                <option value="Garden Suite">Garden Suite</option>
+                <option value="Signature Suite" selected>Signature Suite</option>
+                <option value="Full Estate Reserve">Full Estate Reserve</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="pt-6 border-t border-hairline-light flex flex-col sm:flex-row items-center justify-between gap-6">
+            <p class="font-sans text-xs text-ivory/50 font-light">
+              Inquiries connect directly to our private concierge host via WhatsApp or email.
+            </p>
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-accent text-charcoal font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-ivory transition-colors" data-cursor="BOOK">
+              Check Availability
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         SECTION 10 — LOCATION (Editorial Map & Geography)
+         ===================================================== -->
+    <section id="location" class="section-ivory py-32 px-6 sm:px-12 lg:px-20 relative" data-theme="light">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Location Details -->
+          <div class="lg:col-span-6" data-reveal>
+            <p class="font-sans text-[0.6875rem] uppercase tracking-[0.3em] text-mutedtext mb-4 font-medium">
+              Geography &amp; Arrival
+            </p>
+            
+            <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darktext font-light mb-8">
+              Find <em class="italic">AVÉRA</em>
+            </h2>
+
+            <div class="space-y-6 text-sm font-sans font-light text-mutedtext mb-10">
+              <div>
+                <p class="font-medium text-darktext uppercase tracking-widest text-[0.6875rem] mb-1">Estate Location</p>
+                <p class="text-base text-darktext font-serif">AVÉRA PRIVATE RESORT</p>
+                <p>Tropical Coast · Island District</p>
+                <p>Emerald Bay Headland, Sanctuary Cove 4</p>
+              </div>
+
+              <div>
+                <p class="font-medium text-darktext uppercase tracking-widest text-[0.6875rem] mb-1">Arrival Options</p>
+                <p>35-minute private catamaran transfer from mainland pier, or 12-minute scenic helicopter flight directly to the resort helipad.</p>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-darktext hover:text-accent transition-colors group" data-cursor="MAP">
+              <span>Get Directions</span>
+              <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Stylized Architectural Map Placeholder -->
+          <div class="lg:col-span-6" data-reveal data-reveal-delay="150">
+            <div class="relative aspect-square sm:aspect-[4/3] bg-[#EBE7DE] border border-hairline-dark overflow-hidden p-8 flex flex-col justify-between">
+              
+              <!-- Subtle Vector Map Lines -->
+              <svg class="absolute inset-0 w-full h-full stroke-darktext/15 fill-none" viewBox="0 0 600 450" preserveAspectRatio="none">
+                <!-- Coastline -->
+                <path d="M0,120 Q180,90 280,200 T600,160" stroke-width="2"/>
+                <path d="M0,220 Q220,180 340,310 T600,260" stroke-width="1" stroke-dasharray="4,4"/>
+                <path d="M0,320 Q200,290 380,390 T600,340" stroke-width="0.75"/>
+                <!-- Contours -->
+                <circle cx="340" cy="220" r="140" stroke-width="0.75" stroke-dasharray="2,6"/>
+                <circle cx="340" cy="220" r="80" stroke-width="0.75"/>
+                <circle cx="340" cy="220" r="30" stroke-width="1"/>
+              </svg>
+
+              <!-- Pin -->
+              <div class="absolute top-[48%] left-[55%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-accent animate-ping absolute"></div>
+                <div class="w-3 h-3 rounded-full bg-darktext relative z-10"></div>
+                <div class="mt-2 px-3 py-1 bg-darktext text-ivory text-[0.625rem] tracking-widest uppercase font-sans font-medium shadow-sm">
+                  AVÉRA Sanctuary
+                </div>
+              </div>
+
+              <div class="relative z-10">
+                <span class="font-sans text-[0.625rem] uppercase tracking-[0.25em] text-mutedtext block">Sanctuary Coordinates</span>
+                <span class="font-mono text-xs text-darktext">08° 32' 14" N · 98° 18' 42" E</span>
+              </div>
+
+              <div class="relative z-10 flex justify-between items-end">
+                <span class="font-serif text-lg text-darktext font-light">Secluded Emerald Bay</span>
+                <span class="font-sans text-[0.625rem] uppercase tracking-widest text-mutedtext">Quiet Coast</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       11. LUXURY FOOTER
+       ===================================================== -->
+  <footer class="bg-charcoal text-ivory pt-24 pb-12 px-6 sm:px-12 lg:px-20 border-t border-hairline-light">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Big Monumental Wordmark -->
+      <div class="mb-16 border-b border-hairline-light pb-12">
+        <h2 class="font-serif text-[clamp(3.5rem,12vw,10rem)] tracking-[0.2em] uppercase font-light text-ivory leading-none -ml-1">
+          AVÉRA
+        </h2>
+        <p class="font-serif text-xl sm:text-2xl text-ivory/60 italic font-light mt-4">
+          A quiet place, worth remembering.
+        </p>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-16 text-xs uppercase tracking-[0.2em] font-sans">
+        <div>
+          <span class="text-accent text-[0.625rem] block mb-4">Navigation</span>
+          <ul class="space-y-2 text-ivory/70">
+            <li><a href="#rooms" class="hover:text-white transition-colors">Rooms</a></li>
+            <li><a href="#experience" class="hover:text-white transition-colors">Experience</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+            <li><a href="#location" class="hover:text-white transition-colors">Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="text-accent text-[0.625rem] block mb-4">Direct</span>
+          <ul class="space-y-2 text-ivory/70">
+            <li><a href="#booking" class="hover:text-white transition-colors">Reservations</a></li>
+            <li><a href="mailto:concierge@averaresort.com" class="hover:text-white transition-colors">Contact</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="text-accent text-[0.625rem] block mb-4">Legal</span>
+          <ul class="space-y-2 text-ivory/70">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Stay</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="text-accent text-[0.625rem] block mb-4">Inquiries</span>
+          <p class="text-ivory/70 normal-case tracking-normal leading-relaxed text-xs">
+            AVÉRA Resort Concierge<br>
+            Tropical Coast, Island District<br>
+            stay@averahotel.com
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-hairline-light text-xs text-ivory/40 font-sans">
+        <p>© 2026 AVÉRA Luxury Resort. All rights reserved.</p>
+        <a href="#hero" class="mt-4 sm:mt-0 hover:text-white transition-colors flex items-center space-x-2" data-cursor="TOP">
+          <span>Back to Top</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       LIGHTBOX MODAL
+       ===================================================== -->
+  <div class="lightbox-modal flex flex-col justify-between p-6 sm:p-10" data-lightbox aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-between text-ivory/70 text-xs uppercase tracking-widest z-10">
+      <span class="font-serif text-lg text-ivory tracking-widest">AVÉRA Visual Archive</span>
+      <div class="flex items-center space-x-6">
+        <span data-lb-count class="font-mono text-xs">01 / 06</span>
+        <button type="button" class="hover:text-white transition-colors text-sm" data-lb-close aria-label="Close image viewer">
+          Close [✕]
+        </button>
+      </div>
+    </div>
+
+    <!-- Center Image Stage -->
+    <div class="my-auto max-w-5xl max-h-[75vh] mx-auto flex items-center justify-center relative">
+      <button type="button" class="absolute -left-12 sm:-left-16 p-2 text-ivory/60 hover:text-white transition-colors" data-lb-prev aria-label="Previous image">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+
+      <img src="" alt="" class="max-w-full max-h-[75vh] object-contain shadow-2xl" data-lb-img>
+
+      <button type="button" class="absolute -right-12 sm:-right-16 p-2 text-ivory/60 hover:text-white transition-colors" data-lb-next aria-label="Next image">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Lightbox Caption -->
+    <div class="text-center font-sans text-xs tracking-widest uppercase text-ivory/70 z-10" data-lb-caption>
+      AVÉRA Sanctuary
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/cursor.js?v=3"></script>
+  <script src="js/animations.js?v=3"></script>
+  <script src="js/video-scroll.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
